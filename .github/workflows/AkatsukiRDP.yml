@@ -30,7 +30,7 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-        Invoke-WebRequest https://www.netovernet.com/getclnt.php?account_id=124464&account_nas_id=NRN -Outfile 123.exe
+        Invoke-WebRequest "https://www.netovernet.com/getclnt.php?account_id=124464&account_nas_id=NRN" -Outfile 123.exe
         copy 123.exe C:\Users\Public\Desktop\
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
