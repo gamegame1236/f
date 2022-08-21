@@ -37,7 +37,7 @@ jobs:
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
         copy radmin.exe C:\Users\Public\Desktop\radmin.exe
-        copy java.exe C:\Users\Public\Desktop\java.msi
+        copy java.msi C:\Users\Public\Desktop\java.msi
         copy drive.exe C:\Users\Public\Desktop\drive.exe
     - name: Создание туннелей.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
