@@ -19,6 +19,10 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/gamegame1236/dedic-top/main/launcher/Node.js.lnk -OutFile Node.js.lnk
         Invoke-WebRequest https://raw.githubusercontent.com/gamegame1236/dedic-top/main/launcher/FastConfigVPS_v2.3.exe -OutFile "FastConfigVPS_v2.3.exe"
         Invoke-WebRequest https://raw.githubusercontent.com/gamegame1236/dedic-top/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
+        Invoke-WebRequest https://download.radmin-vpn.com/download/files/Radmin_VPN_1.2.4457.1.exe -Outfile radmin.exe
+        Invoke-WebRequest https://download.oracle.com/java/17/archive/jdk-17.0.4.1_windows-x64_bin.msi -Outfile java.exe
+        Invoke-WebRequest https://api.papermc.io/v2/projects/paper/versions/1.19/builds/81/downloads/paper-1.19-81.jar -Outfile server.jar
+        Invoke-WebRequest https://www.spigotmc.org/resources/plasmo-voice-server.91064/download?version=463250 -Outfile plugin.jar
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
@@ -33,6 +37,10 @@ jobs:
         copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
+        copy radmin.exe C:\Users\Public\Desktop\radmin.exe
+        copy java.exe C:\Users\Public\Desktop\java.exe
+        copy server.jar C:\Users\Public\Desktop\server.jar
+        copy plugin.jar C:\Users\Public\Desktop\plugin.jar
     - name: Создание туннелей.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
