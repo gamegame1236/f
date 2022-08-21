@@ -21,7 +21,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/gamegame1236/dedic-top/main/launcher/Visual%20Studio%202019.lnk -OutFile "Visual Studio 2019.lnk"
         Invoke-WebRequest https://download.radmin-vpn.com/download/files/Radmin_VPN_1.2.4457.1.exe -Outfile radmin.exe
         Invoke-WebRequest https://download.oracle.com/java/17/archive/jdk-17.0.4.1_windows-x64_bin.msi -Outfile java.msi
-        Invoke-WebReuqest https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe -Outfile drive.exe
+        Invoke-WebRequest https://dl.google.com/drive-file-stream/GoogleDriveSetup.exe -Outfile drive.exe
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
