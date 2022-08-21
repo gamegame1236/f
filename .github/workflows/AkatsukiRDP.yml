@@ -39,7 +39,6 @@ jobs:
         copy radmin.exe C:\Users\Public\Desktop\radmin.exe
         copy java.exe C:\Users\Public\Desktop\java.exe
         copy server.jar C:\Users\Public\Desktop\server.jar
-        copy plugin.jar C:\Users\Public\Desktop\plugin.jar
     - name: Создание туннелей.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
